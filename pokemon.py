@@ -1,5 +1,6 @@
 import random
 
+
 class Pokemon:
 
     def __init__(self, especie, level=None, nome=None):
@@ -34,36 +35,25 @@ class Pokemon:
             return False
 
 
-
-
 class PokemonEletrico(Pokemon):
     tipo = "eletrico"
 
-    def atacar(self,pokemon):
-        print("{} lancou um raio do trovao em {}".format(self,pokemon))
+    def atacar(self, pokemon):
+        print("{} lançou um raio do trovão em {}".format(self, pokemon))
+        return super().atacar(pokemon)
 
 
 class PokemonFogo(Pokemon):
     tipo = "fogo"
 
-    def atacar(self,pokemon):
-        print("{} lancou uma bola de fogo em {}".format(self,pokemon))
+    def atacar(self, pokemon):
+        print("{} lançou uma bola de fogo na cabeça de {}".format(self, pokemon))
+        return super().atacar(pokemon)
+
 
 class PokemonAgua(Pokemon):
-    tipo = "agua"
+    tipo = "água"
 
-    def atacar(self,pokemon):
-        print("{} lancou um jato de agua em {}".format(self,pokemon))
-
-class PokemonVeveno(Pokemon):
-    tipo = "veneno"
-
-    def atacar(self,pokemon):
-        print("{} lancou um veneno em {}".format(self,pokemon))
-
-class PokemonPedra(Pokemon):
-    tipo = "pedra"
-
-    def atacar(self,pokemon):
-        print("{} lancou uma pedrada em {}".format(self,pokemon))
-
+    def atacar(self, pokemon):
+        print("{} lançou um jato d'água em {}".format(self, pokemon))
+        return super().atacar(pokemon)
